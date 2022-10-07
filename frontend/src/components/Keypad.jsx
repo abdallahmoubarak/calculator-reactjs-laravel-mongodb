@@ -6,18 +6,23 @@ export default function Keypad() {
       <div className="keypad">
         {keys.map((key, i) => (
           <div key={i}>
-            <Button text={key.text} color={key.color} cls={key.cls} />
+            <Button
+              text={key.text}
+              color={key.color}
+              cls={key.cls}
+              onClick={() => alert(key.text)}
+            />
           </div>
         ))}
       </div>
       <style jsx>{`
         .keypad {
-          display: grid;
-          place-items: center;
-          grid-template-columns: repeat(10, auto);
+          display: flex;
+          flex-wrap: wrap;
           justify-content: center;
           max-width: 60rem;
           margin: auto;
+          font-weight: bold;
         }
       `}</style>
     </>
@@ -212,7 +217,7 @@ const keys = [
   {
     text: "0",
     color: "#aaa",
-    cls: "span",
+    cls: "flex",
   },
   {
     text: ".",

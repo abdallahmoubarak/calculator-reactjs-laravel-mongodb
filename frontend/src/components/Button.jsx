@@ -1,7 +1,10 @@
-export default function Button({ onClick, text, color }) {
+export default function Button({ onClick, text, color, cls }) {
   return (
     <>
-      <button style={{ background: color }} className="btn" onClick={onClick}>
+      <button
+        style={{ background: color }}
+        className={"btn " + cls}
+        onClick={onClick}>
         {text}
       </button>
 
@@ -16,9 +19,13 @@ export default function Button({ onClick, text, color }) {
           border: 1px solid #444;
           font-size: 2rem;
           height: 6rem;
+          flex: 1 1;
         }
         .btn:hover {
           background: #444;
+        }
+        .flex {
+          width: 12rem;
         }
       `}</style>
     </>
