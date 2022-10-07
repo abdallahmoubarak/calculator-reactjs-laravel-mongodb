@@ -16,3 +16,23 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+/******************* btn container ********************/
+
+.btn {
+  background: gray;
+  color: white;
+  font-size: 1.2rem;
+  width: 6rem;
+  border: 1px solid #444;
+  font-size: 2rem;
+  height: 6rem;
+  flex: 1 1;
+}
+.btn:hover {
+  color: white;
+  cursor: pointer;
+}
+.flex {
+  width: 12rem;
+}

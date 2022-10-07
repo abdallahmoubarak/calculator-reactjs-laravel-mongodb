@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-export default function Keypad() {
+export default function Keypad({ value, setValue }) {
   return (
     <>
       <div className="keypad">
@@ -10,7 +10,7 @@ export default function Keypad() {
               text={key.text}
               color={key.color}
               cls={key.cls}
-              onClick={() => alert(key.text)}
+              onClick={() => setValue((value += key.value))}
             />
           </div>
         ))}
@@ -33,10 +33,12 @@ const keys = [
   {
     text: "(",
     color: "gray",
+    value: "(",
   },
   {
     text: ")",
     color: "gray",
+    value: ")",
   },
   {
     text: "mc",
@@ -97,14 +99,17 @@ const keys = [
   {
     text: "7",
     color: "#aaa",
+    value: "7",
   },
   {
     text: "8",
     color: "#aaa",
+    value: "8",
   },
   {
     text: "9",
     color: "#aaa",
+    value: "9",
   },
   {
     text: "x",
@@ -137,14 +142,17 @@ const keys = [
   {
     text: "4",
     color: "#aaa",
+    value: "4",
   },
   {
     text: "5",
     color: "#aaa",
+    value: "5",
   },
   {
     text: "6",
     color: "#aaa",
+    value: "6",
   },
   {
     text: "-",
@@ -177,14 +185,17 @@ const keys = [
   {
     text: "1",
     color: "#aaa",
+    value: "1",
   },
   {
     text: "2",
     color: "#aaa",
+    value: "2",
   },
   {
     text: "3",
     color: "#aaa",
+    value: "3",
   },
   {
     text: "+",
@@ -218,6 +229,7 @@ const keys = [
     text: "0",
     color: "#aaa",
     cls: "flex",
+    value: "0",
   },
   {
     text: ".",
